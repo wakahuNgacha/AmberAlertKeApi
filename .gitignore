@@ -1,0 +1,4 @@
+Api/db.sqlite3
+Api/missingPerson/migrations/
+Api/report/migrations/
+Api/user/migrations/
