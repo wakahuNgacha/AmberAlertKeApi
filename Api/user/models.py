@@ -12,3 +12,5 @@ class User(models.Model):
     surname = models.CharField(max_length=255)
     locaton = models.CharField(max_length=255)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES)
+    email = models.EmailField(unique=True)
+    password = models.CharField(max_length=128)
