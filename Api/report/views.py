@@ -3,8 +3,11 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Report
 from .serializers import ReportSerializer
+from rest_framework.permissions import AllowAny, IsAuthenticated
 
 class ReportView(APIView):
+    permission_classes = [IsAuthenticated]
+
     def get(self, request, pk=None):
         if pk:
             # Retrieve a single report

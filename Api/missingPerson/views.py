@@ -3,8 +3,14 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import MissingPerson
 from .serializers import MissingPersonSerializer
+from rest_framework.permissions import AllowAny, IsAuthenticated
 
 class MissingPersonView(APIView):
+    def get_permissions(self):
+        if self.request.method == 'GET':
+            return [AllowAny()]
+        return [IsAuthenticated()]
+
     def get(self, request, pk=None):
         if pk:
             # Retrieve a single missing person

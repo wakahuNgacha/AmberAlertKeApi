@@ -4,4 +4,3 @@ Api/report/migrations/
 Api/user/migrations/
 .env
 Api/Api/__pycache__
-Api/Api/__pycache__/settings.cpython-312.pyc
